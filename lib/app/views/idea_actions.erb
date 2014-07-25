@@ -1,0 +1,9 @@
+<form class="form-like" role="form" action='/<%= idea.id %>/like' method='POST'/>
+  <input type='submit' value="Like" class="btn btn-primary"/>
+</form>
+
+<form class="form-signin" role= "form" action="/<%= idea.id %>" method="POST">
+  <a href="/<%= idea.id %>/edit" class= "btn btn-primary">Edit</a>
+  <input type="hidden" name="_method" value="DELETE">
+  <input class= "btn btn-primary" type="submit" value="Delete"/>
+</form>

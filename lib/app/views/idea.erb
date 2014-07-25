@@ -1,0 +1,8 @@
+<div class="row">
+  <div class="col-lg-4">
+    <img class="img-circle" src="http://thegraphicsfairy.com/wp-content/uploads/blogger/-GSPcL9gJ1hc/T05l-8syFzI/AAAAAAAAQtw/kAZSg3dGJX0/s1600/lightbulb-Vintage-Image-GraphicsFairy.jpg" alt="Generic placeholder image" style="width: 44px; height: 75px;">
+    <h3><%= idea.title %></h3>
+    <h5><%= idea.description %></h5>
+    <%= format_rank(idea) %>
+    <%= erb :idea_actions, locals: { idea: idea } %>
+  </div>

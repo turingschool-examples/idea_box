@@ -1,0 +1,9 @@
+<div class="container">
+  <div class="masthead">
+    <h1>Idea Dashboard</h1>
+  </div>
+
+  <% ideas.each do |idea| %>
+    <%= erb :idea, locals: { idea: idea } %>
+  <% end %>
+</div>
