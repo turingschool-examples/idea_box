@@ -1,5 +1,5 @@
-require 'app/models/idea'
-require 'app/models/idea_store'
+require_relative 'app/models/idea'
+require_relative 'app/models/idea_store'
 
 class IdeaBoxApp < Sinatra::Base
   set :method_override, true

@@ -49,9 +49,8 @@ class IdeaStore
   end
 
   def self.create(data)
-  database.transaction do
-    database['ideas'] << data
+    database.transaction do
+      database['ideas'] << data
     end
   end
-
 end
