@@ -1,6 +1,7 @@
-%form.form-like{action: "/#{idea.id}/like", method: "POST", role: "form"}
-%input.btn.btn-primary{type: "submit", value: "Like"}
-%form.form-signin{action: "/#{idea.id}", method: "POST", role: "form"}
-  %a.btn.btn-primary{href: "/#{idea.id}/edit"} Edit
-  %input{name: "_method", type: "hidden", value: "DELETE"}
-    %input.btn.btn-primary{type: "submit", value: "Delete"}
+.row
+  %form.pull-left{action: "/#{idea.id}/like", method: "POST", role: "form"}
+    %input.btn.btn-primary{type: "submit", value: "Like"}
+  %form.pull-left{action: "/#{idea.id}", method: "POST", role: "form"}
+    %a.btn.btn-primary{href: "/#{idea.id}/edit"} Edit
+    %input{name: "_method", type: "hidden", value: "DELETE"}
+      %input.btn.btn-primary{type: "submit", value: "Delete"}

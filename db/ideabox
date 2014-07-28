@@ -2,7 +2,9 @@
 ideas:
 - title: bird internet
   description: lots of tweets
+  rank: 2
 - title: Hello
   description: This is an idea
+  rank: 2
 - title: Hello
   description: How are you

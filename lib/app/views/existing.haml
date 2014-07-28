@@ -1,5 +1,5 @@
 .container
-  .masthead
+  .col-md-6
     %h1 Idea Dashboard
-  - ideas.each do |idea|
-    = haml :idea, locals: { idea: idea }
+    - ideas.each do |idea|
+      = haml :idea, locals: { idea: idea }
