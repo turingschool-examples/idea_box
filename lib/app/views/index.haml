@@ -4,9 +4,10 @@
     %h1#intro-header Feeling Inspired?
     %h4#intro-subheader Add your latest and greatest ideas here.
     %form{action: "/", method: "POST", role: "form"}
-      .form-group
+      .form-group#idea-title
         %input.form-control{name: "idea[title]", placeholder: "Title", type: "text"}
+      .form-group#idea-description
+        %textarea.form-control{name: "idea[description]", placeholder: "Description", type: "text"}
       .form-group
-        %textarea.form-control{name: "idea[description]", placeholder: "Description"}
-    %input.btn.btn-primary{type: "submit", value: "Submit"}
+        %input.btn.btn-primary{type: "submit", value: "Submit"}
   .col-md-3

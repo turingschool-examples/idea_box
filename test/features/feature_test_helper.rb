@@ -4,7 +4,7 @@ require 'capybara'
 require_relative "../test_helper"
 require_relative '../../lib/app.rb'
 
-Capybara.app = IdeaBoxApp
+Capybara.app            = IdeaBoxApp
 
 class FeatureTest < Minitest::Test
   include Capybara::DSL
