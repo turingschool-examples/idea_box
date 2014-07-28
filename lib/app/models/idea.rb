@@ -1,4 +1,3 @@
-
 class Idea
   include Comparable
   attr_reader :title, :description, :rank, :id

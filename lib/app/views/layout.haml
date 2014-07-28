@@ -1,0 +1,15 @@
+%html
+  %head
+    %link{href: "offcanvas.css", rel: "stylesheet"}
+      %link{href: "sign_in.css", rel: "stylesheet"}
+        %link{href: "justified-nav.css", rel: "stylesheet"}
+          %script{src: "https//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"}
+          %link{href: "//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css", rel: "stylesheet"}
+            %link{href: "//http//getbootstrap.com/examples/signin/signin.css", rel: "stylesheet"}
+              %script{src: "offcanvas.js"}
+              %script{src: "//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"}
+              %title IdeaBox
+  %body
+    .container
+      = haml :navbar
+      = yield

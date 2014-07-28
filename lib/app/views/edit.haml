@@ -1,0 +1,15 @@
+.container
+  .col-lg-6
+    %form{action: "/#{idea.id}", method: "POST"}
+      %p
+        - if idea.id
+          %h2.form-signin-heading Edit your idea.
+        - else
+          Your Idea
+      - if idea.id
+        %input{name: "_method", type: "hidden", value: "PUT"}/
+      %input.form-control{name: "idea[title]", placeholder: "title", type: "text", value: idea.title}/
+      %br
+      %textarea.form-control{name: "idea[description]", placeholder: "description"}= idea.description
+      %br
+      %input.btn.btn-lg.btn-primary.btn-block{type: "submit"}/

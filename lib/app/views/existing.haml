@@ -1,0 +1,5 @@
+.container
+  .masthead
+    %h1 Idea Dashboard
+  - ideas.each do |idea|
+    = haml :idea, locals: { idea: idea }

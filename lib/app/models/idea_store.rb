@@ -1,7 +1,6 @@
 require 'yaml/store'
 
 class IdeaStore
-
   def self.all
     ideas = []
     raw_ideas.each_with_index do |data, i|

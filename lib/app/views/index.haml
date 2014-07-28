@@ -1,0 +1,10 @@
+.container
+  .form-group
+    %form.form-signin{action: "/", method: "POST", role: "form"}
+      %h1.form-signin-heading Feeling Inspired?
+      %h4 Add your latest and greatest ideas here.
+      %input.form-control{name: "idea[title]", placeholder: "title", type: "text"}/
+      %br/
+      %textarea.form-control{name: "idea[description]", placeholder: "description"}
+      %br/
+      %input.btn.btn-lg.btn-primary.btn-block{type: "submit"}/

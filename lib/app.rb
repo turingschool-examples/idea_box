@@ -1,19 +1,20 @@
-require 'idea_box'
+require 'app/models/idea'
+require 'app/models/idea_store'
 
 class IdeaBoxApp < Sinatra::Base
   set :method_override, true
   set :root, 'lib/app'
 
   not_found do
-    erb :error
+    haml :error
   end
 
   get '/' do
-    erb :index, locals: {ideas: IdeaStore.all.sort, idea: Idea.new(params)}
+    haml :index, locals: {ideas: IdeaStore.all.sort, idea: Idea.new(params)}
   end
 
   get '/existing' do
-    erb :existing, locals: {ideas: IdeaStore.all.sort, idea: Idea.new(params)}
+    haml :existing, locals: {ideas: IdeaStore.all.sort, idea: Idea.new(params)}
   end
 
   post '/' do
@@ -28,7 +29,7 @@ class IdeaBoxApp < Sinatra::Base
 
   get '/:id/edit' do |id|
     idea = IdeaStore.find(id.to_i)
-    erb :edit, locals: {ideas: IdeaStore.all.sort, idea: Idea.new(params)}
+    haml :edit, locals: {ideas: IdeaStore.all.sort, idea: Idea.new(params)}
   end
 
   put '/:id' do |id|
@@ -48,5 +49,4 @@ class IdeaBoxApp < Sinatra::Base
       "Rank: #{idea.rank}"
     end
   end
-
 end

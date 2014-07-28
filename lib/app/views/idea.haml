@@ -1,0 +1,6 @@
+.row
+  .col-lg-4
+    %h3= idea.title
+    %h5= idea.description
+    = format_rank(idea)
+    = haml :idea_actions, locals: { idea: idea }
