@@ -5,10 +5,6 @@ class IdeaBoxApp < Sinatra::Base
   set :method_override, true
   set :root, 'lib/app'
 
-  not_found do
-    haml :error
-  end
-
   get '/' do
     haml :index, locals: {ideas: IdeaStore.all.sort, idea: Idea.new(params)}
   end
